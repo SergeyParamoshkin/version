@@ -1,5 +1,9 @@
 package version
 
+import (
+	"fmt"
+)
+
 var (
 	AppName   string
 	Version   string
@@ -7,5 +11,5 @@ var (
 )
 
 func ShowVersion() string {
-	return AppName + Version + BuildTime
+	return fmt.Sprintf("%s %s %s", AppName, Version, BuildTime)
 }
