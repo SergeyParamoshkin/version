@@ -1,11 +1,11 @@
 package version
 
-type Version struct {
+var (
 	AppName   string
 	Version   string
 	BuildTime string
-}
+)
 
-func (v *Version) ShowVersion() string {
-	return v.AppName + v.Version + v.BuildTime
+func ShowVersion() string {
+	return AppName + Version + BuildTime
 }
